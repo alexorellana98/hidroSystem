@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 require '../ProcesoSubir/conexion.php';
 
@@ -182,6 +183,7 @@ echo "</script>";
 
       
     $idAccess;
+      
      $_SESSION["validar"]=true;
 
 }else if($momb==0 && $passw==0){
