@@ -8,7 +8,7 @@ if(!$_SESSION["validar"]){
 ?>
  <!-- MENU LATERAL -->
  <div class="navbar nav_title" style="border: 0;">
-              <a href="main.php" class="site_title"><i class="fa fa-paw"></i> <span>Pozos</span></a>
+              <a href="main.php" class="site_title"><i class="fa fa-tint"></i> <span>HIDROSIS</span></a>
             </div>
 
             <div class="clearfix"></div>
