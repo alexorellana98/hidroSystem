@@ -1,6 +1,6 @@
 <?php 
 
-include "../conexion/conexion.php";
+include "../../conexion/conexion.php";
 
 $idDepto = $_REQUEST["depto"];
 

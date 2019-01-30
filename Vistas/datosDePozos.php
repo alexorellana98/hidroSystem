@@ -44,6 +44,7 @@ include "../conexion/conexion.php";
     <link href="../vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
     <link href="../vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
     <link href="../vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
+    
     <link rel="stylesheet" href="../libreriasJS/alertifyjs/css/alertify.min.css">
     <link rel="stylesheet" href="../libreriasJS/alertifyjs/css/themes/bootstrap.min.css">
 
@@ -135,13 +136,13 @@ include "../conexion/conexion.php";
 
 
 
-                        <input type="text" class="form-control has-feedback-left" id="codigo" placeholder="Código" readonly="readonly">
+                        <input type="hidden" class="form-control has-feedback-left" id="codigo" placeholder="Código" readonly="readonly">
 
                         <span class="fa fa-barcode form-control-feedback left" aria-hidden="true"></span>
                       </div>
 
 
-                        <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+                        <div class="col-md-12 col-sm-12 col-xs-12 form-group">
                           <select id="departamento" name="departamento" class="form-control">
                             <option value="0" selected hidden>Seleccione un departamento</option>
                               <?php
@@ -742,7 +743,8 @@ include "../conexion/conexion.php";
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>
 	  <script src="../libreriasJS/jquery.mask.min.js"></script>
-
+<script src="../Vistas/js/datosDePozosJs/cargarMunicipios.js"></script>
+   <script src="../Vistas/js/datosDePozosJs/procesarDatosJs.js"></script>
     <!-- Datatables -->
     <script src="../vendors/datatables.net/js/jquery.dataTables.min.js"></script>
     <script src="../vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
@@ -763,12 +765,12 @@ include "../conexion/conexion.php";
 
     <!--scripts de pre procesamiento-->
 
-    <script src="js/datosDePozosJs/cargarMunicipios.js"></script>
+    
 
     <!--scripts de pre procesamiento-->
 
     <!--Scripts de procesamiento-->
-    <script src="js/datosDePozosJs/procesarDatosJs.js"></script>
+    
     <!--Scripts de procesamiento-->
 
 	<!--Configuaracion de las mascaras del formulario-->

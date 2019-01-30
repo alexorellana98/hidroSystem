@@ -3,7 +3,7 @@ $(document).ready(function(){
 
    $("#guardar").on('click', function(){
 
-    var codigo = $('#codigo').val();
+    var codigo = 12+Math.floor((Math.random() * (11-5))+5);
     var depto = $('#departamento').val();
     var municipio = $('#municipio').val();
     var tipo = $('#tipo').val();
@@ -95,6 +95,40 @@ $(document).ready(function(){
 
     return false;
    });//fin del click
+
+   $("#deptoEdit").on("change", function(){
+
+    var depto = $("#deptoEdit").val();
+    //alert("llega");
+    if(depto != ""){
+        //alert("llega");
+        $.ajax({
+            type:'POST',
+            url: '../Controladores/datosDePozos/extraerMunicipios.php',
+            data:{depto:depto},
+            success:function(data){
+
+                if(data != 0 || data != ""){
+                    $("#muniEdit").empty();
+                    $("#muniEdit").append(data);
+                }
+                if(data == "0"){
+                
+                    $("#muniEdit").empty();
+                    $("#muniEdit").append("<option value='0' >No hay municipios para el departamento</option>"); 
+                }
+                
+                
+            },
+            error:function(data){
+                alertify.error("error" +data);
+                
+            }
+        });
+    }
+        
+
+});//fin del change
 
    $("#iframe").contents().find("#obtener").on("click", function(){
          var latitud = $("#iframe").contents().find("#coordsLa").val();

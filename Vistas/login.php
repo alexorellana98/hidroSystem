@@ -177,7 +177,7 @@ $pass=$_POST['contra'];
 
 echo "<script language='javascript'>";
 echo  "
-         location.href = 'usuarios.php?aux1=1';
+         location.href = 'main.php?aux1=1';
          ";
 echo "</script>";
 
